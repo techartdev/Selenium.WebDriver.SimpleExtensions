@@ -1,5 +1,7 @@
 # Selenium.WebDriver.SimpleExtensions
 
+![Nuget](https://img.shields.io/nuget/v/Selenium.WebDriver.SimpleExtensions)
+
 A robust and versatile Selenium WebDriver extension library to simplify web element and browser interactions.
 
 ## OverviewOverview
