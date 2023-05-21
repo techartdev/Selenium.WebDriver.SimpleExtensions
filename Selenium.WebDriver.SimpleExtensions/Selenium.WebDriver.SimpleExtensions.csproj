@@ -3,7 +3,27 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Selenium.WebDriver.SimpleExtensions</Title>
+    <Authors>TechArtDev</Authors>
+    <Company>TechArt Ltd</Company>
+    <Description>Simple extension methods over IWebElement and IWebDriver</Description>
+    <PackageProjectUrl>https://github.com/techartdev/Selenium.WebDriver.SimpleExtensions</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/techartdev/Selenium.WebDriver.SimpleExtensions</RepositoryUrl>
+    <PackageTags>selenium;extensions;sibling;parent</PackageTags>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Selenium.WebDriver" Version="4.9.1" />
