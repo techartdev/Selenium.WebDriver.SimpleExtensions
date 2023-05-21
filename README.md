@@ -10,34 +10,58 @@ This library consists of two primary sets of extension methods: WebElementExtens
 ## WebElementExtensions
 This class offers a series of helper methods to easily traverse the DOM:
 
-**GetParent:** Returns the parent of the current element.
+**GetParent**
 
-**GetNextSibling:** Returns the next sibling of the current element.
+Returns the parent of the current element.
 
-**GetPreviousSibling:** Returns the previous sibling of the current element.
+**GetNextSibling**
 
-**GetSiblingByIndex:** Returns a sibling of the current element at a specified index.
+Returns the next sibling of the current element.
 
-**GetFirstChild:** Returns the first child of the current element.
+**GetPreviousSibling**
 
-**GetLastChild:** Returns the last child of the current element.
+Returns the previous sibling of the current element.
 
-**GetChildByIndex:** Returns a child of the current element at a specified index.
+**GetSiblingByIndex**
 
-**GetChildByText:** Returns a child of the current element that matches a specified text.
+Returns a sibling of the current element at a specified index.
 
-**GetChildThatContainsText:** Returns a child of the current element that contains a specified text.
+**GetFirstChild**
 
-**GetParent(int skip):** Returns the parent of the current element, skipping a specified number of levels.
+Returns the first child of the current element.
+
+**GetLastChild**
+
+Returns the last child of the current element.
+
+**GetChildByIndex**
+
+Returns a child of the current element at a specified index.
+
+**GetChildByText**
+
+Returns a child of the current element that matches a specified text.
+
+**GetChildThatContainsText**
+
+Returns a child of the current element that contains a specified text.
+
+**GetParent(int skip)**
+
+Returns the parent of the current element, skipping a specified number of levels.
 
 *Please note that the GetParent(int skip) method throws an ArgumentException if the skip parameter is less than 0.*
 
 ## WebDriverExtensions
 This class includes methods to execute JavaScript scripts directly in the browser:
 
-**ExecuteJavaScript:** Executes a JavaScript script in the browser and returns the result casted to a specified type.
+**ExecuteJavaScript:**
 
-**ExecuteJavaScriptAndDeserialize:** Executes a JavaScript script in the browser, serializes the result into a JSON string, and then deserializes that string into an object of a specified type.
+Executes a JavaScript script in the browser and returns the result casted to a specified type.
+
+**ExecuteJavaScriptAndDeserialize:**
+
+Executes a JavaScript script in the browser, serializes the result into a JSON string, and then deserializes that string into an object of a specified type.
 
 ## Getting Started
 To use these extensions, first add a reference to this library in your project. Then, in your code, use the methods on instances of IWebElement and IWebDriver as required.
