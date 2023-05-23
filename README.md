@@ -92,7 +92,7 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 ## Contact
 Visit https://scrapeweb.site
 
-Or join us on Discord: https://discord.gg/f3EfBQamnT
+Or join the **Web Scraping and Automation** community on Discord: https://discord.gg/f3EfBQamnT
 
 ## Disclaimer
 The extensions provided by this library are subject to the reliability of the Selenium WebDriver and the browser being automated. Please ensure the elements are available and interactable before using these extension methods to avoid any unexpected exceptions or behavior.
