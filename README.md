@@ -50,6 +50,26 @@ Returns a child of the current element that contains a specified text.
 
 Returns the parent of the current element, skipping a specified number of levels.
 
+**GetChildren** 
+
+Retrieves a read-only collection of web elements that are direct children of the given web element.
+
+**Delete:**
+
+Deletes the specified web element from the web page using JavaScript.
+
+**AppendHtml:**
+
+This method appends the provided HTML content to the inner HTML of the given web element using JavaScript.
+
+**SetText:** 
+
+This method sets the text content of the specified web element to the given text using JavaScript.
+
+**SetAttribute:** 
+
+Sets the attribute of the specified web element to the provided attribute name and value using JavaScript.
+
 *Please note that the GetParent(int skip) method throws an ArgumentException if the skip parameter is less than 0.*
 
 ## WebDriverExtensions
