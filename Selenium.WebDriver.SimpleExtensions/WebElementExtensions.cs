@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
+using System.Xml.Linq;
 
 namespace Selenium.WebDriver.SimpleExtensions
 {
@@ -24,6 +25,11 @@ namespace Selenium.WebDriver.SimpleExtensions
         public static IWebElement GetSiblingByIndex(this IWebElement e, int index)
         {
             return e.FindElement(By.XPath($"following-sibling::*[{index}]"));
+        }
+
+        public static IReadOnlyCollection<IWebElement> GetSiblings(this IWebElement e)
+        {
+            return e.FindElements(By.XPath("./following-sibling::* | ./preceding-sibling::*"));
         }
 
         public static IWebElement GetFirstChild(this IWebElement e)
