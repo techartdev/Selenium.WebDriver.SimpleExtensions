@@ -1,7 +1,6 @@
 ﻿using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Selenium.WebDriver.SimpleExtensions
 {
@@ -57,9 +56,32 @@ namespace Selenium.WebDriver.SimpleExtensions
             return e.FindElements(By.XPath("child::*"));
         }
 
-        public static IReadOnlyCollection<IWebElement> GetAllChildren(this IWebElement e)
+        public static void Delete(this IWebElement e)
         {
-            return e.FindElements(By.XPath(".//*"));
+            var element = (WebElement)e;
+            IJavaScriptExecutor js = (IJavaScriptExecutor)element.WrappedDriver;
+            js.ExecuteScript("arguments[0].remove()", e);
+        }
+
+        public static void AppendHtml(this IWebElement e, string elementHtml)
+        {
+            var element = (WebElement)e;
+            IJavaScriptExecutor js = (IJavaScriptExecutor)element.WrappedDriver;
+            js.ExecuteScript("arguments[0].innerHTML += arguments[1]", element, elementHtml);
+        }
+
+        public static void SetText(this IWebElement e, string text)
+        {
+            var element = (WebElement)e;
+            IJavaScriptExecutor js = (IJavaScriptExecutor)element.WrappedDriver;
+            js.ExecuteScript("arguments[0].innerText = arguments[1]", e, text);
+        }
+
+        public static void SetAttribute(this IWebElement e, string attributeName, string attributeValue)
+        {
+            var element = (WebElement)e;
+            IJavaScriptExecutor js = (IJavaScriptExecutor)element.WrappedDriver;
+            js.ExecuteScript($"arguments[0].setAttribute('{attributeName}', '{attributeValue}')", e);
         }
 
         /// <summary>
