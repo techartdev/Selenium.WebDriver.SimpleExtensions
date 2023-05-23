@@ -1,5 +1,7 @@
 ﻿using OpenQA.Selenium;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Selenium.WebDriver.SimpleExtensions
 {
@@ -48,6 +50,16 @@ namespace Selenium.WebDriver.SimpleExtensions
         public static IWebElement GetChildThatContainsText(this IWebElement e, string text)
         {
             return e.FindElement(By.XPath($"child::*[contains(text(),'{text}')]"));
+        }
+
+        public static IReadOnlyCollection<IWebElement> GetChildren(this IWebElement e)
+        {
+            return e.FindElements(By.XPath("child::*"));
+        }
+
+        public static IReadOnlyCollection<IWebElement> GetAllChildren(this IWebElement e)
+        {
+            return e.FindElements(By.XPath(".//*"));
         }
 
         /// <summary>
