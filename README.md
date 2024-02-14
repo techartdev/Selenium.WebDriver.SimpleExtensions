@@ -96,3 +96,12 @@ Or join the **Web Scraping and Automation** community on Discord: https://discor
 
 ## Disclaimer
 The extensions provided by this library are subject to the reliability of the Selenium WebDriver and the browser being automated. Please ensure the elements are available and interactable before using these extension methods to avoid any unexpected exceptions or behavior.
+
+---
+
+If you find this app helpful and would like to support the development of more tools and projects, consider buying me a coffee. Your support is greatly appreciated!
+
+[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/techartdev)
+
+Thank you for your support!
+
